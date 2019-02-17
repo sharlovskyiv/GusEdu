@@ -1,36 +1,83 @@
+<!--
 <!doctype html>
 <html>
 <head>
 	<style type="text/css">
+
 		.block {
 			width: 50px;
 			height: 50px;
 			border: solid 5px grey;
 			padding: 5px;
+			cursor: pointer;
 		}
+
+		.linkblock {
+			
+		}
+
 		div {
 			display: inline-block;
 		}
+
 	</style>
 	<script>
-		function ChangeColor(Element) {
-			if (Element.style.color == 'grey') Element.style.color = 'red';
-			else Element.style.color = 'grey';
-		return false;
-		}	
-		//function click() {
-		//	var click_block = document.getElementById('click');
-		//	document.getElementById('click_block')
-		//}
+		function ChangeColor(id){
+		document.getElementById(id).style.borderColor="red";
+}
+		
 	</script>
 </head>
 <body>
-	<div class="block" id="firstBlock" onclick="return ChangeColor(this)">
-		<a href=""></a>>
-	</div>
-	<div class="block" id="twoBlock" onclick="return ChangeColor(this)"></div>
-	<div class="block" id="threeBlock" onclick="return ChangeColor(this)"></div>
-	<div class="block" id="fourBlock" onclick="return ChangeColor(this)"></div>
-	<div class="block" id="fiveBlock" onclick="return ChangeColor(this)"></div>
+	<div class="block" id="firstBlock"  onclick="ChangeColor('firstBlock')"></div>
+	<div class="block" id="twoBlock" onclick="ChangeColor('twoBlock')"></div>
+	<div class="block" id="threeBlock" onclick="ChangeColor('threeBlock')"></div>
+	<div class="block" id="fourBlock" onclick="ChangeColor('fourBlock')"></div>
+	<div class="block" id="fiveBlock" onclick="ChangeColor('fiveBlock')"></div>
+	<br><button class="button" id="btn">CLICK</button>
+</body>
+</html>
+-->
+<!doctype html>
+<html>
+<head>
+	<style type="text/css">
+
+		.block {
+			width: 50px;
+			height: 50px;
+			border: solid 5px grey;
+			padding: 5px;
+			cursor: pointer;
+		}
+
+		.linkblock {
+			
+		}
+
+		div {
+			display: inline-block;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function show_hide(id) {
+    	var elem = document.getElementById(id);
+			if(elem.style.borderColor == 'red') {
+        	elem.style.borderColor = 'grey';
+    	}
+    	else {
+        	elem.style.borderColor = 'red';
+    	}
+	}
+	</script>
+</head>
+<body>
+	<div class="block" id="firstBlock"  onclick="show_hide('firstBlock')"></div>
+	<div class="block" id="twoBlock" onclick="show_hide('twoBlock')"></div>
+	<div class="block" id="threeBlock" onclick="show_hide('threeBlock')"></div>
+	<div class="block" id="fourBlock" onclick="show_hide('fourBlock')"></div>
+	<div class="block" id="fiveBlock" onclick="show_hide('fiveBlock')"></div>
+	<br><button class="button" id="btn">CLICK</button>
 </body>
 </html>
