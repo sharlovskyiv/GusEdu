@@ -23,7 +23,6 @@
 		#btn {
 			cursor: pointer;
 		 	position: relative;
-			width: 50px;
 			height: 20px;
 			left: 50%;
     		transform: translate(-50%, -50%);
@@ -31,20 +30,28 @@
 		
 	</style>
 	<script>
-		let lastpress = 'firstBlock';
-     	function show_hide(id) {
-         	var elem = document.getElementById(id);
+		let lastpress = 'fiveBlock';
+		let btnText = ['Left', 'Right'];
+        let btnIndex = 0;
+
+	     	function show_hide(id) {
          	document.getElementById(lastpress).style.borderColor = 'grey';
-         	elem.style.borderColor = 'red';
+         	document.getElementById(id).style.borderColor = 'red';
          	lastpress = id;
 		}
+
 		function valueBtn(){ 
-    		if (document.getElementById('btn1').value=="Left"){ 
-        		document.getElementById('btn1').value='Rigth' 
-        		} 
-    		else 
-        		document.getElementById('btn1').value="Left"; 
+    		btnIndex = 1 - btnIndex;
+            document.getElementById('btn1').value = btnText[btnIndex]; 
     	} 
+
+    	let ArrId = ['firstBlock','twoBlock','threeBlock','fourBlock','fiveBlock'];
+    	
+    	function pressbtn() {
+    		if (true) {}
+    			console.log(-2 % 5);
+    		show_hide(ArrId[(ArrId.indexOf(lastpress)+1) % ArrId.length]);
+    	}
 
     </script>
 </head>
@@ -57,7 +64,8 @@
 		<div class="block" id="fourBlock" onclick="show_hide('fourBlock')"></div>
 		<div class="block" id="fiveBlock" onclick="show_hide('fiveBlock')"></div>
 	</div>
-	<br><input id="btn" type="button" name="CLICK" value="CLICK" onclick="SlideBloks()"/> 
+	<p id="stop"></p>
+	<br><input id="btn" type="button" name="CLICK" value="CLICK" onclick="pressbtn()"/> 
 	<br><input id="btn1" name="Left" type="button"  value="Left" onclick="valueBtn()" style="cursor: pointer;" />
 </div>
 </body>
