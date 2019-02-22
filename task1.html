@@ -25,29 +25,29 @@
 		 	position: relative;
 			height: 20px;
 			left: 50%;
-    		transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 		}
 		
 	</style>
 	<script>
-		let lastpress = 'fiveBlock';
+        let lastpress = 'fiveBlock';
 		let btnText = ['Left', 'Right'];
         let btnIndex = 0;
         let ArrId = ['firstBlock', 'twoBlock', 'threeBlock', 'fourBlock', 'fiveBlock'];
         let cycleDirection = [ArrId.length + 1, ArrId.length - 1];
         
-	    function show_hide(id) {
-         	document.getElementById(lastpress).style.borderColor = 'grey';
-         	document.getElementById(id).style.borderColor = 'red';
-         	lastpress = id;
-		}
-
-		function valueBtn() { 
-    		btnIndex = 1 - btnIndex;
+        function show_hide(id) {
+            document.getElementById(lastpress).style.borderColor = 'grey';
+            document.getElementById(id).style.borderColor = 'red';
+            lastpress = id;
+        }
+		
+        function valueBtn() { 
+            btnIndex = 1 - btnIndex;
             document.getElementById('btn1').value = btnText[btnIndex]; 
-    	} 
+        } 
 
-    	let pressbtn = () => show_hide(ArrId[(ArrId.indexOf(lastpress) + cycleDirection[btnIndex]) % ArrId.length]);
+        let pressbtn = () => show_hide(ArrId[(ArrId.indexOf(lastpress) + cycleDirection[btnIndex]) % ArrId.length]);
 
     </script>
 </head>
