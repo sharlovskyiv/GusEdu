@@ -3,35 +3,35 @@
 <head>
 	<style type="text/css">
 
-		.block {
-			width: 50px;
-			height: 50px;
-			border: solid 5px grey;
-			padding: 5px;
-			cursor: pointer;
-			display: inline-block;
-		}
-		.slider{
-    		max-width: 80%;
-    		position: absolute;
-    		height: 300px;
-    		left: 50%;
-    		transform: translate(-50%);
-    		margin-bottom: 130px;
-    		margin: auto;
-		}
+        .block {
+            width: 50px;
+            height: 50px;
+            border: solid 5px grey;
+            padding: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .slider {
+            max-width: 80%;
+            position: absolute;
+            height: 300px;
+            left: 50%;
+            transform: translate(-50%);
+            margin-bottom: 130px;
+            margin: auto;
+        }
 		#btn {
-			cursor: pointer;
-		 	position: relative;
-			height: 20px;
-			left: 50%;
+            cursor: pointer;
+            position: relative;
+            height: 20px;
+            left: 50%;
             transform: translate(-50%, -50%);
-		}
+        }
 		
 	</style>
 	<script>
         let lastpress = 'fiveBlock';
-		let btnText = ['Left', 'Right'];
+        let btnText = ['Left', 'Right'];
         let btnIndex = 0;
         let ArrId = ['firstBlock', 'twoBlock', 'threeBlock', 'fourBlock', 'fiveBlock'];
         let cycleDirection = [ArrId.length + 1, ArrId.length - 1];
