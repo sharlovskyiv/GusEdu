@@ -33,7 +33,7 @@
 		let lastpress = 'fiveBlock';
 		let btnText = ['Left', 'Right'];
         let btnIndex = 0;
-        let ArrId = ['firstBlock','twoBlock','threeBlock','fourBlock','fiveBlock'];
+        let ArrId = ['firstBlock', 'twoBlock', 'threeBlock', 'fourBlock', 'fiveBlock'];
         let cycleDirection = [ArrId.length + 1, ArrId.length - 1];
         
 	    function show_hide(id) {
@@ -42,7 +42,7 @@
          	lastpress = id;
 		}
 
-		function valueBtn(){ 
+		function valueBtn() { 
     		btnIndex = 1 - btnIndex;
             document.getElementById('btn1').value = btnText[btnIndex]; 
     	} 
