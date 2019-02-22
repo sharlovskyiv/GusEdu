@@ -33,8 +33,10 @@
 		let lastpress = 'fiveBlock';
 		let btnText = ['Left', 'Right'];
         let btnIndex = 0;
-
-	     	function show_hide(id) {
+        let ArrId = ['firstBlock','twoBlock','threeBlock','fourBlock','fiveBlock'];
+        let cycleDirection = [ArrId.length + 1, ArrId.length - 1];
+        
+	    function show_hide(id) {
          	document.getElementById(lastpress).style.borderColor = 'grey';
          	document.getElementById(id).style.borderColor = 'red';
          	lastpress = id;
@@ -45,13 +47,7 @@
             document.getElementById('btn1').value = btnText[btnIndex]; 
     	} 
 
-    	let ArrId = ['firstBlock','twoBlock','threeBlock','fourBlock','fiveBlock'];
-    	
-    	function pressbtn() {
-    		if (true) {}
-    			console.log(-2 % 5);
-    		show_hide(ArrId[(ArrId.indexOf(lastpress)+1) % ArrId.length]);
-    	}
+    	let pressbtn = () => show_hide(ArrId[(ArrId.indexOf(lastpress) + cycleDirection[btnIndex]) % ArrId.length]);
 
     </script>
 </head>
